@@ -10,7 +10,7 @@ $(document).ready(function () {
     if (pageId == 'top') {
         startTittleAnim();
         $('#gotStampBtn').click(function () {
-            window.location.href = "stamp2.html";
+            window.location.href = "list.html";
         });
     }
 
@@ -20,8 +20,16 @@ $(document).ready(function () {
         showIcon('#testIcon2', 4000);
 
         //stampページ 2
-        showIcon('#testIcon1_2', 1000);
-        showIcon('#testIcon2_2', 4000);
+        showIcon('#testIcon2_1', 1000);
+        //showIcon('#testIcon2_2', 4000);
+    }
+
+    //割れるページ
+    if (pageId == 'stamp3') {
+        setTimeout(function () {
+            $('body').css('background-image', 'url(img/broken.jpg)');
+            audio.play();
+        }, 3000);
     }
 
 });
@@ -37,7 +45,7 @@ function showIcon(argId, argTime) {
 //TODO タイトル表示
 function startTittleAnim() {
     var targetObj = $('.split');
-    var delaySpeed = 200;
+    var delaySpeed = 100;
     var fadeSpeed = 0;
     var targetTxt = targetObj.html();
 

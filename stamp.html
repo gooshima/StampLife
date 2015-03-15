@@ -20,6 +20,17 @@
         $(document).ready(function () {
         });
     </script>
+
+    <style>
+        body {
+            min-height: 100%;
+            background-image: url(img/foxy_card.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
 </head>
 
 <body id="stamp">
@@ -29,7 +40,7 @@
 
 <div style="display: none;">
     <audio id="audio" controls>
-        <source src="se_explotion.mp3">
+        <source src="sounds/stamp_soft.mp3">
     </audio>
     <br>
     <input type="button" value="play" onclick="audio_play()">
@@ -41,36 +52,24 @@
 
     <p><a href="stamp.html">スタンプをもらう準備</a></p>
 
-    <p><a href="stamp2.html">スタンプをもらう準備(2人目)</a></p>
-
     <p><a href="list.html">スタンプヒストリー</a></p>
 
     <p><a href="index.html">スタンプラリー情報</a></p>
 
     <p><a href="index.html"> HELP</a></p>
 
-    <p><a href="stamp.html">???</a></p>
+    <!--<p><a href="stamp2.html">スタンプをもらう準備</a></p>-->
+
+    <!--<p><a href="stamp3.html">スタンプをもらう準備</a></p>-->
 </div>
-
-
-<section>
-    <div class="container">
-        <p class="title" style="text-align: center;">Got Stamp ??</p>
-
-        <p class="content">
-            <!-- TODO contents here -->
-        </p>
-    </div>
-</section>
 
 <div class="text-center" style="margin: 10px 0 20px 0 ;">
-    <img src="img/icon_fx.jpeg" id="testIcon1" style="display: none; width: 100px;" class="img-circle">
-    <img src="img/icon_fx.jpeg" id="testIcon2" style="display: none; width: 100px;" class="img-circle">
+    <img src="img/fox_stamp.png" id="testIcon1"
+         style="display: none; width: 180px;position: absolute; top: 180px; left:0" class="img-circle">
+    <img src="img/fox_stamp.png" id="testIcon2"
+         style="display: none; width: 180px; position: absolute;top: 300px; right:20px;" class="img-circle">
+
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
