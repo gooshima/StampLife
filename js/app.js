@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-    console.log("app loaded...");
+    console.log("app loaded...2");
 });
 
 $(document).ready(function () {
@@ -15,21 +15,42 @@ $(document).ready(function () {
     }
 
     if (pageId == 'stamp') {
-        //stampページ 1
-        showIcon('#testIcon1', 1000);
-        showIcon('#testIcon2', 4000);
 
-        //stampページ 2
-        showIcon('#testIcon2_1', 1000);
-        //showIcon('#testIcon2_2', 4000);
+        var isFirst = true;
+        $('#debugBtn').click(function () {
+            if (isFirst) {
+                isFirst = false;
+                //stampページ 1
+                showIcon('#testIcon1', 1000);
+                showIcon('#testIcon2', 4000);
+
+                //stampページ 2
+                showIcon('#testIcon2_1', 1000);
+                //showIcon('#testIcon2_2', 4000);
+            }
+        });
+    }
+
+    if (pageId == 'stamp2') {
+
+        var isFirst = true;
+        $('#debugBtn').click(function () {
+            if (isFirst) {
+                isFirst = false;
+                //stampページ 2
+                showIcon('#testIcon2_1', 1000);
+            }
+        });
     }
 
     //割れるページ
     if (pageId == 'stamp3') {
-        setTimeout(function () {
-            $('body').css('background-image', 'url(img/broken.jpg)');
-            audio.play();
-        }, 3000);
+        $('#debugBtn').click(function () {
+            setTimeout(function () {
+                $('body').css('background-image', 'url(img/broken.jpg)');
+                audio.play();
+            }, 3000);
+        });
     }
 
 });
